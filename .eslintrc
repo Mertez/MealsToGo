@@ -1,0 +1,10 @@
+{
+    "extends": "@react-native-community",
+    "rules": {
+        "prettier/prettier": "error",
+        "arrow-body-style": "off",
+        "prefer-arrow-callback": "off",
+        "quotes": [2, "double", {"avoidEscape": true}],
+        "endOfLine":"auto"
+      }    
+}
