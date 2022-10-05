@@ -7,8 +7,7 @@ import {
   StatusBar,
 } from "react-native";
 import { Searchbar } from "react-native-paper";
-import { colors } from "../../../utils/colors";
-import { spaces, fontSizes } from "../../../utils/sizes";
+import { standardcolors } from "../../../infrastructure/theme/colors";
 import { RestaurantInfoCard } from "../components/restautant-info-card.component";
 
 
@@ -27,14 +26,14 @@ export const RestaurantsScreen = () => (
 
 const styles = StyleSheet.create({
   search: {
-    backgroundColor: colors.white,
-    padding: spaces.sm,
-    //paddingTop: spaces.sm,
+    backgroundColor: standardcolors.white,
+    padding: 12,
+    //paddingTop: 12,
   },
   result: {
     flex: 1,
-    backgroundColor: colors.gray,
-    padding: spaces.sm,
-    color: colors.white,
+    backgroundColor: standardcolors.gray,
+    padding: 12,
+    color: standardcolors.white,
   },
 });

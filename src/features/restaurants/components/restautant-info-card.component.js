@@ -3,8 +3,7 @@ import {
   Text, StyleSheet
 } from "react-native";
 import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
-import { colors } from "../../../utils/colors";
-import { spaces, fontSizes } from "../../../utils/sizes";
+import { standardcolors } from "../../../infrastructure/theme/colors";
 import styled from "styled-components/native";
 
 export const RestaurantInfoCard = ({restaurant = {} }) => {
@@ -27,8 +26,17 @@ export const RestaurantInfoCard = ({restaurant = {} }) => {
       marginBottom: 10px;
     `;
 
+    
+    const Cardx = styled(Card)`
+      background-color: #ffffff;
+      border-top-right-radius: 8px;
+      border-top-left-radius: 8px;
+      padding: 10px;
+    `;
+
+
     return (
-        <Card elevation={5} style={styles.card}>
+        <Cardx elevation={2} style={styles.card}>
             <Card.Title title={name} subtitle={openingHours} left={LeftContent} />
             <Card.Content>
             <Title>{name}</Title>
@@ -39,19 +47,19 @@ export const RestaurantInfoCard = ({restaurant = {} }) => {
             <Button>Cancel</Button>
             <Button>Ok</Button>
             </Card.Actions>
-        </Card>
+        </Cardx>
         )
 }
 
 const styles = StyleSheet.create({
-  card: {
-    backgroundColor: colors.white,
-    paddingVertical: spaces.sm,
-  },
+  //card: {
+    // backgroundColor: standardcolors.white,
+    // paddingVertical: 12,
+  //},
   cover: {
-    backgroundColor: colors.white,
-    margin: spaces.sm,
-    borderRadius: spaces.sm,
+    backgroundColor: standardcolors.white,
+    margin: 12,
+    borderRadius: 12,
     
   },
 });

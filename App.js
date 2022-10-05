@@ -7,16 +7,24 @@ import {
   StatusBar,
   Platform
 } from "react-native";
-import { colors } from "./src/utils/colors";
+import styled from "styled-components/native";
 
 const isAndroid = Platform.OS === "android";
+
+const SafeArea = styled(SafeAreaView)`
+  flex: 1;
+  background-color: white;
+  margin-top: ${isAndroid ? StatusBar.currentHeight : 0}px;
+`;
+
+
 
 export default function App() {
   return (
     <>
-    <SafeAreaView style={styles.safeArea}>
+    <SafeArea>
       <RestaurantsScreen />
-    </SafeAreaView>
+    </SafeArea>
     <ExpoStatusBar style="auto" />
     </>
   );
@@ -24,9 +32,9 @@ export default function App() {
 
 
 const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1,
-    backgroundColor: colors.white,
-    marginTop: isAndroid ? StatusBar.currentHeight : 0,
-  }
+  // safeArea: {
+  //   flex: 1,
+  //   backgroundColor: standardcolors.white,
+  //   marginTop: isAndroid ? StatusBar.currentHeight : 0,
+  // }
 });

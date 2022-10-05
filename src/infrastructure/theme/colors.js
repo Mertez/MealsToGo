@@ -1,4 +1,5 @@
-export const colors = {
+
+export const standardcolors = {
   white: '#fff',
   lightestgray: '#eee',
   darkestgray: '#444',
@@ -149,3 +150,33 @@ export const colors = {
   yellow: '#ffff00',
   yellowgreen: '#9acd32',
 };
+
+
+export const colors = {
+  brand: {
+    primary: standardcolors.blue,
+    secondary: standardcolors.navy,
+    muted: standardcolors.lightblue,
+  },
+  ui:{
+    primary: standardcolors.darkgray,
+    secondary: standardcolors.gray,
+    tertiary: standardcolors.lightestgray,
+    quaternary: standardcolors.white,
+    disabled: standardcolors.darkestgray,
+    error: standardcolors.orangered,
+    success: standardcolors.green,
+  },
+  bg:{
+    primary: standardcolors.white,
+    secondary:standardcolors.lightestgray,
+  },
+  text:{
+    primary: standardcolors.darkgray,
+    secondary: standardcolors.gray,
+    inverse: standardcolors.white,
+    disabled: standardcolors.darkestgray,
+    error: standardcolors.orangered,
+    success: standardcolors.green,
+  }
+}
