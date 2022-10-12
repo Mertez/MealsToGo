@@ -1,4 +1,4 @@
-export const sizes = ["8px", "16px", "32px", "64px", "128px"];
+export const sizes = ["0px","4px", "8px", "16px", "32px", "64px", "128px"];
 
 // export const fontSizes = {
 //   sm:8,

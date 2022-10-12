@@ -1,11 +1,13 @@
 
 export const standardcolors = {
+  muted: '#6c757d',
   white: '#fff',
   lightestgray: '#eee',
   darkestgray: '#444',
   black: '#000000',
   violetblue: '#6750a4',
   violetblue66: '#6750a466',
+  violetblue33: '#6750a433',
   aliceblue: '#f0f8ff',
   antiquewhite: '#faebd7',
   aqua: '#00ffff',
@@ -156,7 +158,7 @@ export const colors = {
   brand: {
     primary: standardcolors.blue,
     secondary: standardcolors.navy,
-    muted: standardcolors.lightblue,
+    muted: standardcolors.muted,
   },
   ui:{
     primary: standardcolors.darkgray,
@@ -176,7 +178,9 @@ export const colors = {
     secondary: standardcolors.gray,
     inverse: standardcolors.white,
     disabled: standardcolors.darkestgray,
-    error: standardcolors.orangered,
+    error: standardcolors.orange,
     success: standardcolors.green,
+    warning: standardcolors.yellow,
+    danger: standardcolors.red,
   }
 }
