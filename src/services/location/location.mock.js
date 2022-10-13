@@ -2,25 +2,25 @@ import React from "react";
 
 
 export const locations = {
-    anrwerp:{
+    antwerp:{
         results:[
             {
-                geometry:{
-                    location:{
-                        lat:51.219448,
-                        lng:4.402464,
+                geometry: {
+                    location: {
+                        lat: 51.2132707,
+                        lng: 4.4168305
                     },
-                    viewport:{
-                        northeast:{
+                    viewport: {
+                        northeast: {
                             lat: 51.2145994302915,
-                            lng: 4.41807413091502
+                            lng: 4.418074130291502
                         },
-                        southwest:{
+                        southwest: {
                             lat: 51.2119014697085,
                             lng: 4.415376169708497
                         }
                     }
-                }
+                },
             },
             
         ],
@@ -29,22 +29,22 @@ export const locations = {
     "san francisco":{
         results:[
             {
-                geometry:{
-                    location:{
-                        lng:-122.421622,
-                        lat:37.77361
+                geometry: {
+                    location: {
+                        lat: 37.77361,
+                        lng: -122.421622
                     },
-                    viewport:{
-                        northeast:{
-                            lat: 37.76361,
-                            lng: -122.321622
+                    viewport: {
+                        northeast: {
+                            lat: 37.7750214302915,
+                            lng: -122.4202089697085
                         },
-                        southwest:{
-                            lat: 37.78361,
-                            lng: -122.521622
+                        southwest: {
+                            lat: 37.7723234697085,
+                            lng: -122.4229069302915
                         }
                     }
-                }
+                },
             },
             
         ],

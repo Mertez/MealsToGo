@@ -1,20 +1,20 @@
 import React from "react";
-import { locations } from "./locations.mock";
+import { locations } from "./location.mock";
 import camelize from "camelize";
 
 
 export const locationRequest = (searchTerm) => {
     return new Promise((resolve, reject) =>{
-        const locationMock = locations[searchTerm];
+        const locationMock = locations[searchTerm.toLowerCase()];
         if(!locationMock) {reject("Location Not found!");} else {resolve(locationMock);}
     })
 };
 
 
-export const restaurantsTransform = (result) => {
+export const locationTransform = (result) => {
     const formattedResponse = camelize(result);
     const {geometry = {}} = formattedResponse.results[0];
-    console.log(location);
+    //console.log("from Location.Service: ", geometry.location);
     const {lat,lng} = geometry.location;
 
     return {lat,lng};
