@@ -21,7 +21,7 @@
         }
       },
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
-      "name": "Mercure Antwerp City Centre",
+      "name": "Mercure Los Angeles City Centre",
       "opening_hours": {
         "open_now": true
       },
@@ -37,7 +37,7 @@
       "rating": 4,
       "reference": "",
       "user_ratings_total": 832,
-      "vicinity": "Quinten Matsijslei 25, Antwerpen"
+      "vicinity": "Quinten Matsijslei 25, Los Angelesen"
     },
     {
       "geometry": {
@@ -83,7 +83,7 @@
         "point_of_interest",
         "establishment"
       ],
-      "vicinity": "Lange Gasthuisstraat 45, Antwerpen"
+      "vicinity": "Lange Gasthuisstraat 45, Los Angelesen"
     },
     {
       "business_status": "OPERATIONAL",
@@ -133,7 +133,7 @@
         "establishment"
       ],
       "user_ratings_total": 321,
-      "vicinity": "Handschoenmarkt 3/5, Antwerpen"
+      "vicinity": "Handschoenmarkt 3/5, Los Angelesen"
     },
     {
       "business_status": "OPERATIONAL",
@@ -170,7 +170,7 @@
       "rating": 4.6,
       "reference": "",
       "user_ratings_total": 152,
-      "vicinity": "De Burburestraat 4A, Antwerpen"
+      "vicinity": "De Burburestraat 4A, Los Angelesen"
     },
     {
       "business_status": "OPERATIONAL",
@@ -208,7 +208,7 @@
       "reference": "",
 
       "user_ratings_total": 151,
-      "vicinity": "Leopold de Waelplaats 34, Antwerpen"
+      "vicinity": "Leopold de Waelplaats 34, Los Angelesen"
     },
     {
       "business_status": "OPERATIONAL",
@@ -229,7 +229,7 @@
         }
       },
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-      "name": "De Peerdestal | Restaurant Antwerpen",
+      "name": "De Peerdestal | Restaurant Los Angelesen",
       "opening_hours": {
         "open_now": true
       },
@@ -246,7 +246,7 @@
       "rating": 4.3,
       "reference": "",
       "user_ratings_total": 766,
-      "vicinity": "Wijngaardstraat 8, Antwerpen"
+      "vicinity": "Wijngaardstraat 8, Los Angelesen"
     },
     {
       "business_status": "OPERATIONAL",
@@ -283,7 +283,7 @@
       "rating": 4.2,
       "reference": "",
       "user_ratings_total": 122,
-      "vicinity": "Sint-Antoniusstraat 8, Antwerpen"
+      "vicinity": "Sint-Antoniusstraat 8, Los Angelesen"
     },
     {
       "business_status": "OPERATIONAL",
@@ -321,7 +321,7 @@
       "rating": 4.4,
       "reference": "",
       "user_ratings_total": 156,
-      "vicinity": "Pelgrimstraat 28, Antwerpen"
+      "vicinity": "Pelgrimstraat 28, Los Angelesen"
     },
     {
       "business_status": "OPERATIONAL",
@@ -359,7 +359,7 @@
       "rating": 3.8,
       "reference": "",
       "user_ratings_total": 441,
-      "vicinity": "Lijnwaadmarkt 2, Antwerpen"
+      "vicinity": "Lijnwaadmarkt 2, Los Angelesen"
     },
     {
       "business_status": "OPERATIONAL",
@@ -403,7 +403,7 @@
       "scope": "",
       "types": ["restaurant", "food", "point_of_interest", "establishment"],
       "user_ratings_total": 152,
-      "vicinity": "Reyndersstraat 24, Antwerpen"
+      "vicinity": "Reyndersstraat 24, Los Angelesen"
     },
     {
       "business_status": "OPERATIONAL",
@@ -453,7 +453,7 @@
         "establishment"
       ],
       "user_ratings_total": 689,
-      "vicinity": "Nieuwstad 8, Antwerpen"
+      "vicinity": "Nieuwstad 8, Los Angelesen"
     },
     {
       "business_status": "OPERATIONAL",
@@ -503,7 +503,7 @@
         "establishment"
       ],
       "user_ratings_total": 854,
-      "vicinity": "Ernest Van Dijckkaai 37, Antwerpen"
+      "vicinity": "Ernest Van Dijckkaai 37, Los Angelesen"
     },
     {
       "business_status": "OPERATIONAL",
@@ -547,7 +547,7 @@
       "scope": "",
       "types": ["restaurant", "food", "point_of_interest", "establishment"],
       "user_ratings_total": 316,
-      "vicinity": "Oudeleeuwenrui 12, Antwerpen"
+      "vicinity": "Oudeleeuwenrui 12, Los Angelesen"
     },
     {
       "business_status": "OPERATIONAL",
@@ -591,7 +591,7 @@
       "scope": "",
       "types": ["restaurant", "food", "point_of_interest", "establishment"],
       "user_ratings_total": 1274,
-      "vicinity": "Hopland 2, Antwerpen"
+      "vicinity": "Hopland 2, Los Angelesen"
     },
     {
       "business_status": "OPERATIONAL",
@@ -635,7 +635,7 @@
       "scope": "",
       "types": ["restaurant", "food", "point_of_interest", "establishment"],
       "user_ratings_total": 311,
-      "vicinity": "Oude Koornmarkt 16, Antwerpen"
+      "vicinity": "Oude Koornmarkt 16, Los Angelesen"
     },
     {
       "business_status": "OPERATIONAL",
@@ -686,7 +686,7 @@
         "establishment"
       ],
       "user_ratings_total": 60,
-      "vicinity": "Scheldestraat 15, Antwerpen"
+      "vicinity": "Scheldestraat 15, Los Angelesen"
     },
     {
       "business_status": "OPERATIONAL",
@@ -736,7 +736,7 @@
         "establishment"
       ],
       "user_ratings_total": 335,
-      "vicinity": "Kasteelpleinstraat 45/47, Antwerpen"
+      "vicinity": "Kasteelpleinstraat 45/47, Los Angelesen"
     },
     {
       "business_status": "OPERATIONAL",
@@ -780,7 +780,7 @@
       "scope": "",
       "types": ["restaurant", "food", "point_of_interest", "establishment"],
       "user_ratings_total": 362,
-      "vicinity": "Leopoldstraat 24, Antwerpen"
+      "vicinity": "Leopoldstraat 24, Los Angelesen"
     },
     {
       "business_status": "OPERATIONAL",
@@ -824,7 +824,7 @@
       "scope": "",
       "types": ["restaurant", "food", "point_of_interest", "establishment"],
       "user_ratings_total": 4311,
-      "vicinity": "Jan Blomstraat 8, Antwerpen"
+      "vicinity": "Jan Blomstraat 8, Los Angelesen"
     },
     {
       "business_status": "OPERATIONAL",
@@ -868,7 +868,7 @@
       "scope": "",
       "types": ["restaurant", "food", "point_of_interest", "establishment"],
       "user_ratings_total": 151,
-      "vicinity": "Reyndersstraat 17, Antwerpen"
+      "vicinity": "Reyndersstraat 17, Los Angelesen"
     }
   ],
   "status": "OK"
