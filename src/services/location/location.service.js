@@ -4,9 +4,10 @@ import camelize from "camelize";
 
 
 export const locationRequest = (searchTerm) => {
+    //console.log("locationRequest", searchTerm);
     return new Promise((resolve, reject) =>{
         const locationMock = locations[searchTerm.toLowerCase()];
-        if(!locationMock) {reject("Location Not found!");} else {resolve(locationMock);}
+        if(!locationMock) {reject("Location Not found!");} else {console.log("locationRequest", searchTerm,locationMock);resolve(locationMock);}
     })
 };
 

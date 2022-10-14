@@ -9,10 +9,12 @@ export const LocationContext = createContext();
 
 export const LocationContextProvider = ({ children }) => {
 
-  const [location, setlocation] = useState([]);
+  //console.log("2. LocationContext");
+  const [keyword, setKeyword] = useState("SD");  
+  const [location, setlocation] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [keyword, setKeyword] = useState("San Francisco");
+
 
 
   const onSearch = (searchKeyword) => {
@@ -20,23 +22,25 @@ export const LocationContextProvider = ({ children }) => {
     //return;
     setIsLoading(true);
     setKeyword(searchKeyword);
+    if(!searchKeyword.length){return;}
     locationRequest(searchKeyword)
             .then(locationTransform)
             .then((result)=>{
                 setIsLoading(false);
                 setlocation(result);
-                console.log("from Location.Contenxt: ",searchKeyword, result);
+                console.log("Location.Contenxt::onSearch",searchKeyword, result);
             })
             .catch((err)=>{
                 setIsLoading(false);
                 setError(err);
                 console.log("Error from Location.Contenxt: ", err);
             })
-  }
+  };
 
   useEffect(()=>{
+    console.log(keyword);
     onSearch(keyword);
-  }, [])
+  }, []);
 
   //console.log(location);
 

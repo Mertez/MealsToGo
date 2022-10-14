@@ -2,7 +2,7 @@ import React from "react";
 
 
 export const locations = {
-    antwerp:{
+    la:{
         results:[
             {
                 geometry: {
@@ -26,7 +26,7 @@ export const locations = {
         ],
         status: "OK",
     },
-    "san francisco":{
+    sd:{
         results:[
             {
                 geometry: {

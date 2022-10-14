@@ -11,7 +11,7 @@ const SearchHolder = styled(View)`
 `
 
 export const Search = () => {
-
+    //console.log("1. Search");
     //const locationContext = useContext(LocationContext);
     const { keyword, search } = useContext(LocationContext);
     const [searchKeyword, setSearchKeyword] = useState(keyword);
@@ -19,8 +19,9 @@ export const Search = () => {
     // console.log("Search component::keyword: ", keyword);
 
     useEffect(() => {
-        setSearchKeyword(keyword);
-    }, [keyword]);
+        //console.log("1.1. useEffect");
+        search(searchKeyword);
+    }, []);
 
     return(
         <SearchHolder>
@@ -30,6 +31,7 @@ export const Search = () => {
             style={{backgroundColor:standardcolors.white, marginBottom:0, paddingBottom:0}}
             onSubmitEditing={()=>{
                 // console.log("search.component onSubmitEditing: ", searchKeyword);
+                //console.log("1.2. onSubmitEditing");
                 search(searchKeyword);
             }}
             onChangeText={(text)=>{
@@ -37,6 +39,7 @@ export const Search = () => {
                 //     return;
                 // }
                 //console.log("search.component onChangeText: ", text);
+                //console.log("1.3. onChangeText");
                 setSearchKeyword(text);
             }}
             />
