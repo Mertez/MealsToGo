@@ -10,7 +10,7 @@ export const LocationContext = createContext();
 export const LocationContextProvider = ({ children }) => {
 
   //console.log("2. LocationContext");
-  const [keyword, setKeyword] = useState("SD");  
+  const [keyword, setKeyword] = useState("LA");  
   const [location, setlocation] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -23,31 +23,32 @@ export const LocationContextProvider = ({ children }) => {
     setIsLoading(true);
     setKeyword(searchKeyword);
     if(!searchKeyword.length){return;}
-    locationRequest(searchKeyword)
+    locationRequest(searchKeyword.toLowerCase())
             .then(locationTransform)
             .then((result)=>{
                 setIsLoading(false);
                 setlocation(result);
-                console.log("Location.Contenxt::onSearch",searchKeyword, result);
+                
+                //console.log("Location.Contenxt::onSearch",searchKeyword, result);
             })
             .catch((err)=>{
                 setIsLoading(false);
                 setError(err);
-                console.log("Error from Location.Contenxt: ", err);
+                console.error("Error from Location.Contenxt: ", err);
             })
   };
 
-  useEffect(()=>{
-    console.log(keyword);
-    onSearch(keyword);
-  }, []);
+  // useEffect(()=>{
+  //   console.log("useEffect",keyword);
+  //   onSearch(keyword);
+  // }, []);
 
   //console.log(location);
 
   return (
     <LocationContext.Provider
       value={{
-        location, // equal to location: location
+        location: location, // equal to location: location
         isLoading,
         error,
         search: onSearch,

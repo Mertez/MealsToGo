@@ -19,27 +19,29 @@ export const RestaurantsContextProvider = ({ children }) => {
     setTimeout(()=>{
         restaurantsRequest(loc)
             .then(restaurantsTransform)
-            .then((result)=>{
+            .then((results)=>{
                 setIsLoading(false);
-                setRestaurants(result);
+                setRestaurants(results);
             })
             .catch((err)=>{
                 setIsLoading(false);
                 setError(err);
+                console.error("Error from restaurant.Contenxt: ", err);
             })
 
-    }, 2000);   // wait for 2000 milisec
+    }, 1000);   // wait for 1000 milisec
   }
 
   useEffect(()=>{
+    //console.log("restaurant.context.x:", location);
     if(location){
       const locationString = `${location.lat},${location.lng}`;
-      //console.log("Name", locationString);
+      //console.log("restaurant.context:", locationString);
       retrieveRestaurants(locationString);
     }
 
 
-  }, [])
+  }, [location])
 
   //console.log(restaurants);
 

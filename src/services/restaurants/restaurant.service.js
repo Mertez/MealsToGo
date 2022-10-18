@@ -6,8 +6,16 @@ import camelize from "camelize";
 export const restaurantsRequest = (location) => {
     
     return new Promise((resolve, reject)=>{
+        if(!location){return;}
+
         const mock = mocks[location];
-        if(!mock) {reject("Restaurant Not found!");} else {console.log("restaurantsRequest",location, mock.results.length + " restaurants");resolve(mock);}
+        if(!mock) {
+            reject("Restaurant Not found!");
+        } 
+        else {
+            //console.log("restaurantsRequest",location, mock.results.length + " restaurants");
+            resolve(mock);
+        }
     })
 };
 
@@ -38,6 +46,6 @@ export const restaurantsTransform = ({results = []}) => {
 restaurantsRequest()
     .then(restaurantsTransform)
     .then((transformedResult)=>{
-        //console.log(transformedResult)
+        //console.log("restaurantsRequest",transformedResult)
     })
     .catch((err)=>console.error(err));

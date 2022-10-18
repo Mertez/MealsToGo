@@ -7,7 +7,11 @@ export const locationRequest = (searchTerm) => {
     //console.log("locationRequest", searchTerm);
     return new Promise((resolve, reject) =>{
         const locationMock = locations[searchTerm.toLowerCase()];
-        if(!locationMock) {reject("Location Not found!");} else {console.log("locationRequest", searchTerm,locationMock);resolve(locationMock);}
+        if(!locationMock) {reject("Location Not found!");} 
+        else {
+            resolve(locationMock);
+            //console.log("locationRequest", searchTerm,locationMock);
+        }
     })
 };
 
@@ -15,8 +19,9 @@ export const locationRequest = (searchTerm) => {
 export const locationTransform = (result) => {
     const formattedResponse = camelize(result);
     const {geometry = {}} = formattedResponse.results[0];
-    //console.log("from Location.Service: ", geometry.location);
+    
     const {lat,lng} = geometry.location;
 
+    //console.log("Location.Service.Transform: ", geometry.location);
     return {lat,lng};
 };

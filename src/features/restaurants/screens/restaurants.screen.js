@@ -26,6 +26,7 @@ const SearchResult = styled(View)`
 
 const LoadingIndicator = styled(ActivityIndicator)`
   margin-left: -25px;
+  z-index: 1000;
 `
 
 const LoadingContainer = styled(View)`
