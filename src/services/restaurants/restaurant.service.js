@@ -1,17 +1,17 @@
 import React from "react";
-import { mocks,mockImages } from "./mock";
+import { mocks, mockImages } from "./mock";
 import camelize from "camelize";
 
 
 export const restaurantsRequest = (location) => {
-    
-    return new Promise((resolve, reject)=>{
-        if(!location){return;}
+
+    return new Promise((resolve, reject) => {
+        if (!location) { return; }
 
         const mock = mocks[location];
-        if(!mock) {
+        if (!mock) {
             reject("Restaurant Not found!");
-        } 
+        }
         else {
             //console.log("restaurantsRequest",location, mock.results.length + " restaurants");
             resolve(mock);
@@ -20,18 +20,19 @@ export const restaurantsRequest = (location) => {
 };
 
 const ICONS = {
-    lodging:"bed",
-    restaurant:"food",
-    cafe:"cafe"
+    lodging: "bed",
+    restaurant: "food",
+    cafe: "cafe"
 };
 
 
-export const restaurantsTransform = ({results = []}) => {
-    const mappedResults = results.map((restaurant)=>{
-        restaurant.photos = restaurant.photos.map((p)=>{return mockImages[Math.ceil(Math.random() * (mockImages.length-1))];});
+export const restaurantsTransform = ({ results = [] }) => {
+    const mappedResults = results.map((restaurant) => {
+        restaurant.photos = restaurant.photos.map((p) => { return mockImages[Math.ceil(Math.random() * (mockImages.length - 1))]; });
         return {
             ...restaurant,
-            isOpenNow: restaurant.opening_hours && restaurant.opening_hours.open_now,
+            address: restaurant.vicinity,
+            isOpenNow: restaurant.opening_hours ? restaurant.opening_hours.open_now : false,
             isClosedTemporarily: restaurant.business_status === "CLOSED_TEMPORARILY",
             openingHours: null,
             //photos: [restaurant.icon],
@@ -45,7 +46,7 @@ export const restaurantsTransform = ({results = []}) => {
 
 restaurantsRequest()
     .then(restaurantsTransform)
-    .then((transformedResult)=>{
+    .then((transformedResult) => {
         //console.log("restaurantsRequest",transformedResult)
     })
-    .catch((err)=>console.error(err));
+    .catch((err) => console.error(err));

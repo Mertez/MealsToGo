@@ -5,6 +5,7 @@ import {
   restaurantsTransform
 } from "./restaurant.service";
 
+
 export const RestaurantsContext = createContext();
 
 export const RestaurantsContextProvider = ({ children }) => {

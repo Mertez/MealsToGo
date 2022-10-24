@@ -1,22 +1,24 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import {
   View,
   FlatList,
+  Pressable,
+  TouchableOpacity
 } from "react-native";
 import { ActivityIndicator } from "react-native-paper";
 import { standardcolors } from "../../../infrastructure/theme/colors";
 import { RestaurantInfoCard } from "../components/restautant-info-card.component";
 import styled from "styled-components/native";
-import { RestaurantsContext } from "../../../services/restaurants/restaurant.context";
+import { RestaurantsContext } from "../../../services/restaurants/restaurants.context";
 import { Search } from "../components/search.component";
 
 const RestaurantList = styled(FlatList).attrs({
-  contentContainerStyle:{
+  contentContainerStyle: {
     padding: 12,
-    paddingTop:5,
+    paddingTop: 5,
   }
 })`
-  marginBottom: ${ (props) => props.theme.spaces[2] };
+  marginBottom: ${(props) => props.theme.spaces[2]};
 `;
 
 
@@ -37,34 +39,39 @@ const LoadingContainer = styled(View)`
 `
 
 
-export const RestaurantsScreen = () => {
-  const {isLoading, error, restaurants} = useContext(RestaurantsContext);
+export const RestaurantsScreen = ({ navigation }) => {
+  const { isLoading, error, restaurants } = useContext(RestaurantsContext);
+  //console.log(navigation);
   return (
-  <>
-  {
-    (isLoading) && (
-      <LoadingContainer>
-        <LoadingIndicator
-          size={50}
-          animating={true}
-          color={standardcolors.violetblue}
-        />
-      </LoadingContainer>
-    )
-  }
     <>
-    <Search />
-    <SearchResult>
-      <RestaurantList 
-        data={restaurants}  // restaurantContext.restaurants
-        renderItem={({item})=>{
-           //console.log(item);
-           return(<RestaurantInfoCard restaurant={item} />);
-         }}
-        keyExtractor={(item)=>item.name}
-        contentContainerStyle={{padding:15}}
-      />
-      
-    </SearchResult></>
-  </>)
+      {
+        (isLoading) ? (
+          <LoadingContainer>
+            <LoadingIndicator
+              size={50}
+              animating={true}
+              color={standardcolors.violetblue}
+            />
+          </LoadingContainer>
+        ) : (<></>)
+      }
+      <>
+        <Search />
+        <SearchResult>
+          <RestaurantList
+            data={restaurants}
+            renderItem={({ item }) => {
+
+              return (
+                <TouchableOpacity onPress={() => navigation.navigate("Restaurants Detail Stack", { restaurant: item })}>
+                  <RestaurantInfoCard restaurant={item} />
+                </TouchableOpacity>
+              );
+            }}
+            keyExtractor={(item) => item.name}
+            contentContainerStyle={{ padding: 15 }}
+          />
+
+        </SearchResult></>
+    </>)
 };

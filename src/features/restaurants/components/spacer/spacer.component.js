@@ -19,11 +19,11 @@ const positionVariant = {
 };
 
 const getVariant = (position, size, theme) => {
-    const sizeIndex = sizeVariant[size];
-    const property = positionVariant[position];
-    const value = (theme.sizes[sizeIndex]);
-    // console.log(value,`${property}:${ value }`);
-    return `${property}:${ value }`;
+  const sizeIndex = sizeVariant[size];
+  const property = positionVariant[position];
+  const value = (theme.sizes[sizeIndex]);
+  //console.log(value,`${property}:${ value }`);
+  return `${property}:${value}`;
 }
 
 const SpacerView = styled.View`
