@@ -1,4 +1,4 @@
-import React, {useContext, useState, useEffect} from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { View } from "react-native";
 import styled from "styled-components/native";
 import { Searchbar } from "react-native-paper";
@@ -16,25 +16,27 @@ export const Search = () => {
     const { keyword, search } = useContext(LocationContext);
     const [searchKeyword, setSearchKeyword] = useState(keyword);
 
-    //console.log("Search component::keyword: ", keyword,search);
-
     useEffect(() => {
-        //console.log("SearchComponent.useEffect",searchKeyword);
         search(searchKeyword);
     }, []);
 
-    return(
+    useEffect(() => {
+        setSearchKeyword(keyword);
+    }, [keyword]);
+
+    return (
         <SearcContainer>
-            <Searchbar 
-                placeholder="Search for ..." 
-                value={searchKeyword} 
-                style={{backgroundColor:standardcolors.white, marginBottom:0, paddingBottom:0}}
-                onSubmitEditing={()=>{
+            <Searchbar
+                icon='food'
+                placeholder="Search for ..."
+                value={searchKeyword}
+                style={{ backgroundColor: standardcolors.white, marginBottom: 0, paddingBottom: 0 }}
+                onSubmitEditing={() => {
                     // console.log("search.component onSubmitEditing: ", searchKeyword);
                     //console.log("1.2. onSubmitEditing");
                     search(searchKeyword);
                 }}
-                onChangeText={(text)=>{
+                onChangeText={(text) => {
                     // if(!text.length){
                     //     return;
                     // }
@@ -42,7 +44,7 @@ export const Search = () => {
                     //console.log("1.3. onChangeText");
                     setSearchKeyword(text);
                 }}
-                />
+            />
         </SearcContainer>
     )
 }

@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import { RestaurantsNavigator } from "./restaurants.navigator";
 // import { SettingsNavigator } from "./settings.navigator";
-// import { MapScreen } from "../../features/map/screens/map.screen";
+import { MapScreen } from "../../features/map/screens/map.screen";
 // import { CheckoutNavigator } from "./checkout.navigator";
 // import { CartContextProvider } from "../../services/cart/cart.context";
 import { RestaurantsContextProvider } from "../../services/restaurants/restaurants.context";
@@ -11,13 +11,6 @@ import { LocationContextProvider } from "../../services/location/location.contex
 // import { FavouritesContextProvider } from "../../services/favourites/favourites.context";
 import { colors } from "../../infrastructure/theme/colors";
 import { Text } from "react-native";
-
-
-function MapScreen() {
-    return (
-        <Text variant="title">Map!</Text>
-    );
-}
 
 
 function SettingsScreen() {

@@ -10,7 +10,7 @@ import { standardcolors } from "../../../infrastructure/theme/colors";
 import { RestaurantInfoCard } from "../components/restautant-info-card.component";
 import styled from "styled-components/native";
 import { RestaurantsContext } from "../../../services/restaurants/restaurants.context";
-import { Search } from "../components/search.component";
+import { Search } from "../components/search.restaurant.component";
 
 const RestaurantList = styled(FlatList).attrs({
   contentContainerStyle: {

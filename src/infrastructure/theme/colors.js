@@ -1,5 +1,14 @@
 
 export const standardcolors = {
+  transparent: '#00000000',
+  transparentw33: '#ffffff33',
+  transparentw66: '#ffffff66',
+  transparentwaa: '#ffffffaa',
+  transparentwcc: '#ffffffcc',
+  transparentb33: '#00000033',
+  transparentb66: '#00000066',
+  transparentbaa: '#000000aa',
+  transparentbcc: '#000000cc',
   muted: '#6c757d',
   white: '#fff',
   lightestgray: '#eee',
@@ -160,7 +169,7 @@ export const colors = {
     secondary: standardcolors.navy,
     muted: standardcolors.muted,
   },
-  ui:{
+  ui: {
     primary: standardcolors.darkgray,
     secondary: standardcolors.gray,
     tertiary: standardcolors.lightestgray,
@@ -169,11 +178,11 @@ export const colors = {
     error: standardcolors.orangered,
     success: standardcolors.green,
   },
-  bg:{
+  bg: {
     primary: standardcolors.white,
-    secondary:standardcolors.lightestgray,
+    secondary: standardcolors.lightestgray,
   },
-  text:{
+  text: {
     primary: standardcolors.darkgray,
     secondary: standardcolors.gray,
     inverse: standardcolors.white,
